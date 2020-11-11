@@ -26,8 +26,8 @@ export class ListPersonneComponent implements OnInit {
     )
   }
 
-  deletePersonne(id:number) {
-    this.perso.deletePersonne(id).subscribe(
+  deletePersonne(personne:Personne) {
+    this.perso.deletePersonne(personne.id).subscribe(
       data => {
         console.log('deleted response', data);
         this._router.navigateByUrl('/personne');
