@@ -1,0 +1,9 @@
+<form (ngSubmit)="savePersonne()">
+
+<input type="text" name="nom" [(ngModel)]="personne.nom" placeholder="Entrez votre nom">
+<input type="text"  name="prenom" [(ngModel)]="personne.prenom" placeholder="Entrez votre prenom svp">
+<button type="submit">Add Personne</button>
+
+
+<button *ngIf="personne.id" (click)="deletePersonne(id)" type="">Delete Personne</button>
+</form> 
